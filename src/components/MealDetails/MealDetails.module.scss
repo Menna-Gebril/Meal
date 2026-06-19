@@ -1,0 +1,107 @@
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixin" as *;
+.MealDetails {
+  background-color: $menu-color;
+  margin-left: $sidebar-width;
+  min-height: $main-height;
+  padding: 40px;
+  .showDetails {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  .details {
+    .mealPhoto {
+      text-align: center;
+      width: 100%;
+      img {
+        width: 100%;
+        border-radius: 25px;
+        margin-bottom: 30px;
+      }
+
+      .links {
+        margin-bottom: 25px;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+        .youtube {
+          background-color: #ff0000;
+          padding: 15px 25px;
+          border-radius: 10px;
+          margin-right: 18px;
+        }
+
+        .source {
+          background-color: #28a745;
+          padding: 15px 25px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .ingredients {
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 15px;
+      flex: 1;
+      height: fit-content;
+      h2 {
+        margin-bottom: 15px;
+      }
+      table {
+        width: 100%;
+      }
+
+      .items td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .items td:first-child {
+        text-align: left;
+      }
+
+      .items td:last-child {
+        text-align: right;
+      }
+
+      .cap {
+        color: #444444;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .MealDetails {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .MealDetails {
+    margin-left: $sidebar-width;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .MealDetails {
+    .details {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      .mealPhoto {
+        max-width: 350px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

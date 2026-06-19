@@ -1,0 +1,107 @@
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixin" as *;
+
+button.btn {
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  background-color: transparent;
+}
+
+.openBtn {
+  border: none;
+  font-size: 18px;
+}
+
+.closeBtn {
+  display: none;
+  border: none;
+  font-size: 18px;
+}
+
+.sideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $sidebar-width;
+  height: $main-height;
+  padding: $main-padding 10px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+.logo {
+  width: $main-width;
+}
+.logo img {
+  width: $main-width;
+}
+
+@media screen and (max-width: 640px) {
+  .sideBar {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .showSideBar {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .close {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .overlay {
+    background-color: #fff;
+    width: $sidebar-width;
+    height: $main-height;
+    padding: $main-padding 10px;
+    position: relative;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .openPanel {
+    transform: translateX(0);
+  }
+
+  .closePanel {
+    transform: translateX(-100%);
+  }
+
+  .mark {
+    position: absolute;
+    top: 0.9375rem;
+    right: 0.9375rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 640px) {
+  .sideBar {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  button.btn {
+    display: none;
+  }
+
+  .showSideBar {
+    display: none;
+  }
+}

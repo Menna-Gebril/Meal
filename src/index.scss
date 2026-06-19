@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Comic";
+  src: url(assets/fonts/ComicNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url(assets/fonts/Pacifico-Regular.ttf);
+}
+body {
+  font-family: "Comic";
+}
+h1 {
+  font-family: "Pacifico";
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e57338;
+  border-radius: 10px;
+}

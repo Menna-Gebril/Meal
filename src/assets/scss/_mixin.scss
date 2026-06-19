@@ -1,0 +1,7 @@
+@mixin autoprefixer($proprety, $value) {
+  -webkit-#{$proprety}: $value;
+  -moz-#{$proprety}: $value;
+  -o-#{$proprety}: $value;
+  -ms-#{$proprety}: $value;
+  #{$proprety}: $value;
+}

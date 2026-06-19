@@ -1,0 +1,14 @@
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixin" as *;
+.Footer {
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin-left: $sidebar-width;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  .Footer {
+    margin-left: 0;
+  }
+}

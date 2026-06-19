@@ -1,0 +1,38 @@
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/mixin" as *;
+
+
+
+.btn {
+  width: $main-width;
+  padding: 10px 20px;
+  border: $main-border;
+  color: #000;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  @include autoprefixer(display, flex);
+  @include autoprefixer(align-items, center);
+  gap: 8px;
+  margin-bottom: 25px;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    box-shadow: 2px 8px 10px rgba(242, 151, 36, 0.1);
+  }
+}
+
+.active {
+  border: none;
+  background-color: #f29724;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 2px 10px 10px rgba(242, 151, 36, 0.5);
+
+  &:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+  }
+}
